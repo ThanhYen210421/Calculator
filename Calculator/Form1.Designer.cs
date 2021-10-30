@@ -38,6 +38,7 @@ namespace Calculator
             this.txtNum2 = new System.Windows.Forms.TextBox();
             this.btExit = new System.Windows.Forms.Button();
             this.btAddition = new System.Windows.Forms.Button();
+            this.btSubtraction = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -109,16 +110,27 @@ namespace Calculator
             this.btExit.TabIndex = 2;
             this.btExit.Text = "Thoát";
             this.btExit.UseVisualStyleBackColor = true;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // btAddition
             // 
             this.btAddition.Location = new System.Drawing.Point(77, 215);
             this.btAddition.Name = "btAddition";
-            this.btAddition.Size = new System.Drawing.Size(139, 44);
+            this.btAddition.Size = new System.Drawing.Size(62, 44);
             this.btAddition.TabIndex = 2;
-            this.btAddition.Text = "Tính tổng";
+            this.btAddition.Text = "+";
             this.btAddition.UseVisualStyleBackColor = true;
             this.btAddition.Click += new System.EventHandler(this.btAddition_Click);
+            // 
+            // btSubtraction
+            // 
+            this.btSubtraction.Location = new System.Drawing.Point(169, 215);
+            this.btSubtraction.Name = "btSubtraction";
+            this.btSubtraction.Size = new System.Drawing.Size(62, 44);
+            this.btSubtraction.TabIndex = 2;
+            this.btSubtraction.Text = "-";
+            this.btSubtraction.UseVisualStyleBackColor = true;
+            this.btSubtraction.Click += new System.EventHandler(this.btSubtraction_Click);
             // 
             // Form1
             // 
@@ -126,6 +138,7 @@ namespace Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 374);
             this.Controls.Add(this.btAddition);
+            this.Controls.Add(this.btSubtraction);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.txtNum2);
             this.Controls.Add(this.txtResult);
@@ -139,6 +152,7 @@ namespace Calculator
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.Text = "Tính toán";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,6 +169,7 @@ namespace Calculator
         private System.Windows.Forms.TextBox txtNum2;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Button btAddition;
+        private System.Windows.Forms.Button btSubtraction;
     }
 }
 
